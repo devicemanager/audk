@@ -1,4 +1,4 @@
-# Acidanthera UEFI Development Kit
+# devicemanager UEFI Development Kit
 
 AUDK is a fork of [EDK II project](https://github.com/tianocore/edk2) focused on security.<br>
 The main goal of AUDK project is to bring the best practices of secure code development into firmware domain.<br>
@@ -9,8 +9,8 @@ code hardening through various compiler optimizations and codebase architectural
 
 Stable branches in AUDK project are constructed by rebasing all the commits in master branch upon EDK II stable tag.<br>
 Available stable branches:<br>
-[audk-stable-202211](https://github.com/acidanthera/audk/tree/audk-stable-202211)<br>
-[audk-stable-202302](https://github.com/acidanthera/audk/tree/audk-stable-202302)<br>
+[audk-stable-202211](https://github.com/devicemanager/audk/tree/audk-stable-202211)<br>
+[audk-stable-202302](https://github.com/devicemanager/audk/tree/audk-stable-202302)<br>
 
 ## Supported features
 [PE loader designed with formal methods](#pe-loader-designed-with-formal-methods)<br>

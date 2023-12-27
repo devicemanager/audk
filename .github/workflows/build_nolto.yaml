@@ -30,12 +30,12 @@ jobs:
 
       - name: CI Bootstrap
         run: |
-          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/ocbuild/master/ci-bootstrap.sh) && eval "$src" || exit 1
+          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/devicemanager/ocbuild/master/ci-bootstrap.sh) && eval "$src" || exit 1
           touch UDK.ready
 
       - name: Prepare efibuild.sh
         run: |
-          curl -o ./efibuild.sh https://raw.githubusercontent.com/acidanthera/ocbuild/master/efibuild.sh || exit 1
+          curl -o ./efibuild.sh https://raw.githubusercontent.com/devicemanager/ocbuild/master/efibuild.sh || exit 1
           chmod +x ./efibuild.sh
           ln -s `pwd` UDK
 
@@ -372,7 +372,7 @@ jobs:
       - name: Checkout ocbuild repository
         uses: actions/checkout@v3
         with:
-          repository: acidanthera/ocbuild
+          repository: devicemanager/ocbuild
           ref: new-master
           path: ./
 
@@ -385,7 +385,7 @@ jobs:
       - name: Downloading QEMU
         uses: robinraju/release-downloader@v1.7
         with:
-          repository: "acidanthera/OcBinaryData"
+          repository: "devicemanager/OcBinaryData"
           tag: ${{ env.QEMU_VERSION_TAG }}
           fileName: "qemu.tar.xz"
 
@@ -407,7 +407,7 @@ jobs:
       - name: Downloading Windows PE AARCH64 iso
         uses: robinraju/release-downloader@v1.7
         with:
-          repository: "acidanthera/OcBinaryData"
+          repository: "devicemanager/OcBinaryData"
           tag: ${{ env.WINPE_VERSION_TAG }}
           fileName: "winpe_AARCH64.iso"
 
@@ -474,7 +474,7 @@ jobs:
       - name: Checkout ocbuild repository
         uses: actions/checkout@v3
         with:
-          repository: acidanthera/ocbuild
+          repository: devicemanager/ocbuild
           ref: master
           path: ./
 
@@ -487,7 +487,7 @@ jobs:
       - name: Downloading QEMU
         uses: robinraju/release-downloader@v1.7
         with:
-          repository: "acidanthera/OcBinaryData"
+          repository: "devicemanager/OcBinaryData"
           tag: ${{ env.QEMU_VERSION_TAG }}
           fileName: "qemu.tar.xz"
 
@@ -509,14 +509,14 @@ jobs:
       - name: Downloading Windows PE X64 iso
         uses: robinraju/release-downloader@v1.7
         with:
-          repository: "acidanthera/OcBinaryData"
+          repository: "devicemanager/OcBinaryData"
           tag: ${{ env.WINPE_VERSION_TAG }}
           fileName: "winpe_X64.iso"
 
       - name: Downloading Windows PE IA32 iso
         uses: robinraju/release-downloader@v1.7
         with:
-          repository: "acidanthera/OcBinaryData"
+          repository: "devicemanager/OcBinaryData"
           tag: ${{ env.WINPE_VERSION_TAG }}
           fileName: "winpe_IA32.iso"
 

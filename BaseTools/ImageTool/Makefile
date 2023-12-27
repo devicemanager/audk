@@ -38,7 +38,7 @@ OBJECTS = $(OBJECTS) {$(UIMG)}UefiImageLib.obj UeSupport.obj PeSupport.obj Commo
 OBJECTS = $(OBJECTS) {$(USER)}UserFile.obj UserBaseMemoryLib.obj UserMath.obj UserPcd.obj UserMisc.obj UserGlobalVar.obj UserBootServices.obj
 OBJECTS = $(OBJECTS) {$(BMPN)}BaseMemoryProfileLibNull.obj {$(CMEM)}CommonMemoryAllocationLib.obj {$(CMEM)}CommonMemoryAllocationLibEx.obj
 
-INC = -I . -I $(OC_USER)\User\Include -I $(OC_USER)\Include\Acidanthera
+INC = -I . -I $(OC_USER)\User\Include -I $(OC_USER)\Include\devicemanager
 INC = $(INC) -I $(UDK_PATH)\MdePkg\Include -I $(UDK_PATH)\MdePkg\Include\Library -I $(UDK_PATH)\MdePkg\Include\$(UDK_ARCH)
 INC = $(INC) -I $(UDK_PATH)\MdePkg\Library\BaseLib -I $(UDK_PATH)\MdeModulePkg\Include -I $(UDK_PATH)\UefiCpuPkg\Include
 INC = $(INC) /FI $(OC_USER)\User\Include\UserPcd.h /FI $(UDK_PATH)\MdePkg\Include\Base.h /FI $(OC_USER)\User\Include\UserGlobalVar.h
